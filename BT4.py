@@ -13,7 +13,7 @@ import seaborn as sns
 # pre-processing data
 data = pd.read_csv("Student_Performance.csv")
 filter_data = data[['Hours Studied','Sleep Hours','Performance Index']]
-filter_data['Performance Label'] = (filter_data['Performance Index'] > 80.0).astype(int)
+filter_data['Performance Label'] = (filter_data['Performance Index'] > 40.0).astype(int)
 filtered_data = filter_data.drop(columns=['Performance Index'])
 X = filter_data[['Hours Studied','Sleep Hours']]
 y = filter_data['Performance Label']
